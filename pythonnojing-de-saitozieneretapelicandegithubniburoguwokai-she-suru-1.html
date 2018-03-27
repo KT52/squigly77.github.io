@@ -22,12 +22,12 @@
 
 
 <meta name="author" content="Squigly77" />
-<meta name="description" content="はじめに たまに書き留める備忘録的なブログサイトを作りたいなと思ったものの、WordPressを使うとなると無料で運用出来ない。で、GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）にPelicanを使ってブログ作る方法というのを知ったので作ってみようと。最近HerokuにTwitter Botを作ってGitに触れたからGitHubに興味を持ったというのもあります。 Githubに登録 Gitがインストールされているという前提で進めていきます。 まずはHerokuでアカウントを作成 登録したメールアドレスにメールが届くのでリンクをクリックしてverifyする。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んでInitialize this repository with a READMEにチェックを入れ、Create Repositoryをクリックして新規作成。 ローカルに環境を構築 pelican markdownとghp-importをインストール pmake serve でサーバーが起動しなかったので、outputフォルダに移動して,py -m http.server、もしくはpy -m pelican.serverで起動 …" />
+<meta name="description" content="はじめに たまに書き留める備忘録的なブログサイトを作りたいなと思ったものの、WordPressを使うとなると無料で運用出来ない。で、GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）にPelicanを使ってブログ作る方法というのを知ったので作ってみようと。最近HerokuにTwitter Botを作ってGitに触れたからGitHubに興味を持ったというのもあります。 Githubに登録 Gitがインストールされているという前提で進めていきます。 まずはHerokuでアカウントを作成 登録したメールアドレスにメールが届くのでリンクをクリックしてverifyする。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んでInitialize this repository with a READMEにチェックを入れ、Create Repositoryをクリックして新規作成。 ローカルに環境を構築 pelican markdownとghp-importをインストール $ pip install pelican Markdown $ pip install ghp-import pelican-quickstartでブログのひな型を作成 This script will help …" />
 <meta name="keywords" content="pelican, python, github">
 
 <meta property="og:site_name" content="Squigly77 Blog"/>
 <meta property="og:title" content="Pythonの静的サイトジェネレーターPelicanでGitHubにブログを開設する 1"/>
-<meta property="og:description" content="はじめに たまに書き留める備忘録的なブログサイトを作りたいなと思ったものの、WordPressを使うとなると無料で運用出来ない。で、GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）にPelicanを使ってブログ作る方法というのを知ったので作ってみようと。最近HerokuにTwitter Botを作ってGitに触れたからGitHubに興味を持ったというのもあります。 Githubに登録 Gitがインストールされているという前提で進めていきます。 まずはHerokuでアカウントを作成 登録したメールアドレスにメールが届くのでリンクをクリックしてverifyする。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んでInitialize this repository with a READMEにチェックを入れ、Create Repositoryをクリックして新規作成。 ローカルに環境を構築 pelican markdownとghp-importをインストール pmake serve でサーバーが起動しなかったので、outputフォルダに移動して,py -m http.server、もしくはpy -m pelican.serverで起動 …"/>
+<meta property="og:description" content="はじめに たまに書き留める備忘録的なブログサイトを作りたいなと思ったものの、WordPressを使うとなると無料で運用出来ない。で、GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）にPelicanを使ってブログ作る方法というのを知ったので作ってみようと。最近HerokuにTwitter Botを作ってGitに触れたからGitHubに興味を持ったというのもあります。 Githubに登録 Gitがインストールされているという前提で進めていきます。 まずはHerokuでアカウントを作成 登録したメールアドレスにメールが届くのでリンクをクリックしてverifyする。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んでInitialize this repository with a READMEにチェックを入れ、Create Repositoryをクリックして新規作成。 ローカルに環境を構築 pelican markdownとghp-importをインストール $ pip install pelican Markdown $ pip install ghp-import pelican-quickstartでブログのひな型を作成 This script will help …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="/pythonnojing-de-saitozieneretapelicandegithubniburoguwokai-she-suru-1.html"/>
 <meta property="og:type" content="article"/>
@@ -94,9 +94,38 @@
 <img width="数値" alt="代替テキスト" src="URL">
 登録したメールアドレスにメールが届くのでリンクをクリックしてverifyする。</p>
 <h3>レポジトリを作成</h3>
-<p><code>Repository name</code>に<code>ユーザーネーム.github.io</code>と打ち込んで<code>Initialize this repository with a README</code>にチェックを入れ、<code>Create Repository</code>をクリックして新規作成。</p>
+<p><code>Repository name</code>に<code>ユーザーネーム.github.io</code>と打ち込んで<code>Initialize this repository with a README</code>にチェックを入れ、<code>Create Repository</code>をクリックして新規作成。<br>
+<a href="./images/s_github.com_new.jpg"><img width="400" alt="代替テキスト" src="./images/s_github.com_new.jpg"></a></p>
 <h3>ローカルに環境を構築</h3>
-<p>pelican markdownとghp-importをインストール</p>
+<p>pelican markdownとghp-importをインストール<br>
+<code>$ pip install pelican Markdown</code><br>
+<code>$ pip install ghp-import</code></p>
+<h3>pelican-quickstartでブログのひな型を作成</h3>
+<p><font color='blue'></p>
+<div class="highlight"><pre><span></span>This script will help you create a new Pelican-based website.
+Please answer the following questions so this script can generate the files needed by Pelican.
+\&gt;Where do you want to create your new web site? [.]
+\\&gt;What will be the title of this web site? Squigly77 Blog,
+\&gt; Who will be the author of this web site? Squigly77
+\&gt; What will be the default language of this web site? [Japanese]
+\&gt; Do you want to specify a URL prefix? e.g., http://example, com (Y/n) y
+\&gt; What is your URL prefix? (see above example; no trailing slash) https://squigly77.github.io
+\&gt; Do you want to enable article pagination? (Y/n) y
+\&gt; How many articles per page do you want? [10],
+\&gt;What is your time zone? [Europe/Paris] Asia/Tokyo
+\&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) y
+\&gt; Do you want an auto-reload &amp; simpleHTTP Script to assist with theme and sited evelopment? (Y/n) y
+\&gt; Do you want to upload your website using FTP? (Y/N) n
+\&gt; Do you want to upload your website using SSH? (Y/N) n
+\&gt; Do you want to upload your website using Dropbox? (Y/N) n
+\&gt;Do you want to upload your website using S3? (y/N) n
+\&gt; Do you want to upload your website using Rackspace Cloud Files? (Y/N) n
+\&gt; Do you want to upload your website using GitHub Pages? (Y/N) y
+\&gt; Is this your personal page_(username.github.io)? (Y/N) y Done. Your new project is available at D:\usr¥github-blog\squigly77.github.io
+</pre></div>
+
+
+<p></font></p>
 <p>pmake serve でサーバーが起動しなかったので、outputフォルダに移動して,py -m http.server、もしくはpy -m pelican.serverで起動 localhost:8000で確認</p>
   </div>
   <div class="tag-cloud">

@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
 
+    <link href="/static/custom.css" rel="stylesheet">
 
 
 
@@ -29,6 +30,7 @@
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content=""/>
+<meta property="og:image" content="/images/profile.jpg">
 
   <title>Squigly77 Blog &ndash;     Tag github
 </title>
@@ -38,23 +40,14 @@
   <aside>
     <div>
       <a href="">
-        <img src="/theme/img/profile.png" alt="" title="">
+        <img src="/images/profile.jpg" alt="" title="">
       </a>
       <h1><a href=""></a></h1>
 
-
-      <nav>
-        <ul class="list">
-
-          <li><a href="#" target="_blank">#</a></li>
-          <li><a href="#" target="_blank">#</a></li>
-          <li><a href="#" target="_blank">#</a></li>
-          <li><a href="#" target="_blank">#</a></li>
-        </ul>
-      </nav>
+<p>日曜プログラマー</p>
 
       <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/Squigly24" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/Squigly77/" target="_blank"><i class="fa fa-github"></i></a></li>
         <li><a class="sc-tumblr" href="https://www.tumblr.com/blog/lollapal00za" target="_blank"><i class="fa fa-tumblr"></i></a></li>
       </ul>
     </div>
@@ -68,9 +61,9 @@
 
 <article>
   <header>
-    <h2><a href="/pythonnojing-de-saitozieneretapelicandegithubniburoguwokai-she-suru-1.html#pythonnojing-de-saitozieneretapelicandegithubniburoguwokai-she-suru-1">Pythonの静的サイトジェネレーターPelicanでGitHubにブログを開設する 1</a></h2>
+    <h2><a href="/makeblogwithpelican.html#makeblogwithpelican">Pythonの静的サイトジェネレーターPelicanでGitHubにブログを開設する</a></h2>
     <p>
-          Posted on 日 11 3月 2018 in <a href="/category/python.html">python</a>
+          Posted on 2018-03-27 in <a href="/category/python.html">python</a>
 
 
           &#8226;     Tagged with
@@ -79,20 +72,22 @@
     </p>
   </header>
   <div>
-      <h2>はじめに</h2>
-<p>たまに書き留める備忘録的なブログサイトを作りたいなと思ったものの、WordPressを使うとなると無料で運用出来ない。<br>で、GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）にPelicanを使ってブログ作る方法というのを知ったので作ってみようと。<br>最近HerokuにTwitter Botを作ってGitに触れたからGitHubに興味を持ったというのもあります。</p>
-<h3>Githubに登録</h3>
-<p>Gitがインストールされているという前提で進めていきます。<br>
-まずは<a href="https://github.com/">Heroku</a>でアカウントを作成
-<img width="数値" alt="代替テキスト" src="URL">
-登録したメールアドレスにメールが届くのでリンクをクリックしてverifyする。</p>
+      <p>GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）に<a href="http://docs.getpelican.com/en/stable/">Pelican</a>を使ってブログ作る方法というのを知って実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。</p>
+<h3>GitHubに登録</h3>
+<p>Gitが使えるという前提で進めていきます。<br>
+まずは<a href="https://github.com/">GitHub</a>でアカウントを作成。</p>
 <h3>レポジトリを作成</h3>
-<p><code>Repository name</code>に<code>ユーザーネーム.github.io</code>と打ち込んで<code>Initialize this repository with a README</code>にチェックを入れ、<code>Create Repository</code>をクリックして新規作成。</p>
+<p><code>Repository name</code>に<code>ユーザーネーム.github.io</code>と打ち込んで<code>`Create Repository</code>をクリックして新規作成。<br>
+Initialize this repository with a README`にチェックを入れるとREADME.mdが作られる。  </p>
 <h3>ローカルに環境を構築</h3>
-<p>pelican markdownとghp-importをインストール</p>
-<p>pmake serve でサーバーが起動しなかったので、outputフォルダに移動して,py -m http.server、もしくはpy -m pelican.serverで起動 …</p>
+<p>ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。<br>
+Markdown形式で書く場合はMarkdownもインストール。<br>
+<code>pip install pelican</code><br>
+<code>pip install Markdown</code></p>
+<h3>pelican-quickstartでブログのひな型を作成</h3>
+<p><code>pelican-quickstart</code>とコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる …</p>
       <br>
-      <a class="btn" href="/pythonnojing-de-saitozieneretapelicandegithubniburoguwokai-she-suru-1.html#pythonnojing-de-saitozieneretapelicandegithubniburoguwokai-she-suru-1">    Continue reading
+      <a class="btn" href="/makeblogwithpelican.html#makeblogwithpelican">    Continue reading
 </a>
   </div>
 </article>
@@ -118,7 +113,7 @@
   "@type" : "Blog",
   "name": " Squigly77 Blog ",
   "url" : "",
-  "image": "",
+  "image": "/images/profile.jpg",
   "description": ""
 }
 </script>
