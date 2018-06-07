@@ -23,12 +23,12 @@
 
 
 <meta name="author" content="Squigly77" />
-<meta name="description" content="GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）にPelicanを使ってブログ作る方法というのを知って実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。 GitHubに登録 Gitが使えるという前提で進めていきます。 まずはGitHubでアカウントを作成。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んで`Create Repositoryをクリックして新規作成。 Initialize this repository with a README`にチェックを入れるとREADME.mdが作られる。 ローカルに環境を構築 ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。 Markdown形式で書く場合はMarkdownもインストール。 pip install pelican pip install Markdown pelican-quickstartでブログのひな型を作成 pelican-quickstartとコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる …" />
+<meta name="description" content="今更ながら静的サイトジェネレーターというものの存在を知って、GitHub PagesにPelicanを使ってブログ作ったサイトなどを参考にして実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。 GitHubに登録 Gitが使えるという前提で進めていきます。 まずはGitHubでアカウントを作成。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んでCreate Repositoryをクリックして新規作成。 Initialize this repository with a READMEにチェックを入れるとREADME.mdが作られる。 ローカルに環境を構築 ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。 Markdown形式で書く場合はMarkdownもインストール。 pip install pelican Markdown pelican-quickstartでブログのひな型を作成 pelican-quickstartとコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる。 This script will help …" />
 <meta name="keywords" content="pelican, python, github">
 
 <meta property="og:site_name" content="Squigly77 Blog"/>
 <meta property="og:title" content="Pythonの静的サイトジェネレーターPelicanでGitHubにブログを開設する"/>
-<meta property="og:description" content="GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）にPelicanを使ってブログ作る方法というのを知って実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。 GitHubに登録 Gitが使えるという前提で進めていきます。 まずはGitHubでアカウントを作成。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んで`Create Repositoryをクリックして新規作成。 Initialize this repository with a README`にチェックを入れるとREADME.mdが作られる。 ローカルに環境を構築 ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。 Markdown形式で書く場合はMarkdownもインストール。 pip install pelican pip install Markdown pelican-quickstartでブログのひな型を作成 pelican-quickstartとコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる …"/>
+<meta property="og:description" content="今更ながら静的サイトジェネレーターというものの存在を知って、GitHub PagesにPelicanを使ってブログ作ったサイトなどを参考にして実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。 GitHubに登録 Gitが使えるという前提で進めていきます。 まずはGitHubでアカウントを作成。 レポジトリを作成 Repository nameにユーザーネーム.github.ioと打ち込んでCreate Repositoryをクリックして新規作成。 Initialize this repository with a READMEにチェックを入れるとREADME.mdが作られる。 ローカルに環境を構築 ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。 Markdown形式で書く場合はMarkdownもインストール。 pip install pelican Markdown pelican-quickstartでブログのひな型を作成 pelican-quickstartとコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる。 This script will help …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="/makeblogwithpelican.html"/>
 <meta property="og:type" content="article"/>
@@ -78,21 +78,20 @@
 
 
   <div>
-    <p>GitHub Pages（GitHub Pagesがどういうものなのか知らなかったけど）に<a href="http://docs.getpelican.com/en/stable/">Pelican</a>を使ってブログ作る方法というのを知って実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。</p>
+    <p>今更ながら静的サイトジェネレーターというものの存在を知って、GitHub Pagesに<a href="http://docs.getpelican.com/en/stable/">Pelican</a>を使ってブログ作ったサイトなどを参考にして実際に作ってみたので、その手順を備忘録的に書いてみる。環境はWindows10、Python3.6.4。<br><br></p>
 <h3>GitHubに登録</h3>
 <p>Gitが使えるという前提で進めていきます。<br>
-まずは<a href="https://github.com/">GitHub</a>でアカウントを作成。</p>
+まずは<a href="https://github.com/">GitHub</a>でアカウントを作成。<br><br></p>
 <h3>レポジトリを作成</h3>
-<p><code>Repository name</code>に<code>ユーザーネーム.github.io</code>と打ち込んで<code>`Create Repository</code>をクリックして新規作成。<br>
-Initialize this repository with a README`にチェックを入れるとREADME.mdが作られる。  </p>
+<p><code>Repository name</code>に<code>ユーザーネーム.github.io</code>と打ち込んで<code>Create Repository</code>をクリックして新規作成。<br>
+<code>Initialize this repository with a README</code>にチェックを入れるとREADME.mdが作られる。 <br><br> </p>
 <h3>ローカルに環境を構築</h3>
 <p>ブログを作成するディレクトリにvenvなどで仮想環境を作り、pipでPelicanをインストール。<br>
 Markdown形式で書く場合はMarkdownもインストール。<br>
-<code>pip install pelican</code><br>
-<code>pip install Markdown</code></p>
+<code>pip install pelican Markdown</code><br>
+<br><br></p>
 <h3>pelican-quickstartでブログのひな型を作成</h3>
-<p><code>pelican-quickstart</code>とコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる。<br>
- <font color='gray'></p>
+<p><code>pelican-quickstart</code>とコマンドを打つと、以下の質問が順番に表示されてブログのひな型を簡単に作成できる。  </p>
 <div class="highlight"><pre><span></span>This script will help you create a new Pelican-based website.
 Please answer the following questions so this script can generate the files needed by Pelican.
 &gt;Where do you want to create your new web site? [.]
@@ -117,8 +116,7 @@ Please answer the following questions so this script can generate the files need
 
 
 <p></font></p>
-<p>雛形の作成が終わると、ディレクトリ内はこんな構成になっていると思います。
-<font color='gray'></p>
+<p>雛形の作成が終わると、ディレクトリ内はこんな構成になっていると思います。</p>
 <div class="highlight"><pre><span></span>username.github.io/
 |---content
 |---output
@@ -131,7 +129,7 @@ Please answer the following questions so this script can generate the files need
 
 
 <p></font>
-これで、username.github.io内でpelicanコマンドが使えるようになります。</p>
+これでディレクトリ"username.github.io"内でpelicanコマンドが使えるようになります。<br><br></p>
 <h3>ブログの記事を書く</h3>
 <p>contentディレクトリ内にMarkdown形式で記事を書く。<br>
 最初にメタデータを入れる。TitleとDateだけでもOK   </p>
@@ -140,23 +138,23 @@ Date: 日付<br>
 Category:　カテゴリー<br>
 Tags: タグ<br>
 Author: 著者  </p>
-<p>ファイル名.mdで保存する。   </p>
+<p>ファイル名.mdで保存する。   <br><br></p>
 <h3>記事をジェネレイト</h3>
 <p><code>pelican content</code>でcontent内に作った記事をoutputディレクトリにジェネレイト。 
-outputディレクトリにhtmlファイルが生成されます。  </p>
+outputディレクトリにhtmlファイルが生成されます。  <br><br></p>
 <h3>ローカルで確認</h3>
 <p>outputディレクトリに移動<code>cd output</code>して、<code>python -m pelican.server</code>でローカルサーバーを立ち上げる。  </p>
-<p>ブラウザで<code>localhost:8000</code>にアクセスすると、作成された記事が出力されます。</p>
+<p>ブラウザで<code>localhost:8000</code>にアクセスすると、作成された記事が出力されます。<br><br></p>
 <h3>staticファイル</h3>
 <p>staticファイルはcontentディレクトリ内にstaticディレクトリとかimagesディレクトリを作ってそこに入れる。<br>
 pelicanconf.pyに<code>STATIC_PATHS = ['images']</code>のように記述。<br>
-ディレクトリが複数の場合はコンマ区切りで記述  </p>
+ディレクトリが複数の場合はコンマ区切りで記述  <br><br></p>
 <h3>テーマを導入</h3>
 <p>デフォルトのテーマを変えたい場合、自作するか、<a href="http://pelicanthemes.com/">Pelican Themes</a>からお気に入りのものをダウンロードして適用することも出来ます。
 themesディレクトリを作ってそこにダウンロードしたテーマを入れたら、<code>pelican-themes --i [テーマの入ったディレクトリ]</code>で導入することが出来ます。<br>
-僕はFlexというテーマを選んだので、<code>pelican-themes --i themes/Flex</code>で入れました。<br>
+僕はpelican-bootstrap3というテーマを選んだので、<code>pelican-themes --i themes/pelican-bootstrap3</code>で入れました。<br>
 ちゃんと入ったかを確認するには<code>pelican-themes -l</code><br>
-入ってたら<code>pelicanconf.py</code>にTHEME = 'テーマ名'を追加する。</p>
+入ってたら<code>pelicanconf.py</code>にTHEME = 'テーマ名'を追加する。<br><br></p>
 <h3>GitHub PagesにPush</h3>
 <p>pipでghp-importを入れておくと、GitHub pagesへの公開が楽に行える。<br>
 入れたらGitHubにアップロード<br>
@@ -164,7 +162,8 @@ themesディレクトリを作ってそこにダウンロードしたテーマ�
 <code>git commit -m "first post"</code><br>
 <code>git push -f origin gh-pages:master</code></p>
 <p>少し時間が経ったら、ブラウザで https://ユーザーネーム.github.io にアクセス。
-<br><br></p>
+<br><br>
+実際に作ったのが<a href="https://squigly77.github.io/">こちら</a>。テーマはFlexを使用。</p>
 <h3>参考サイト</h3>
 <p><a href="http://docs.getpelican.com/en/stable/">Pelican</a><br>
 <a href="https://qiita.com/ogrew/items/ecef0a4700d5bd4d875d">Pythonの静的サイトジェネレータ"Pelican"でお手軽にブログをはじめる手順</a><br>
